@@ -4,6 +4,9 @@ import { getPrismicClient } from '../services/prismic';
 
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
+import logo from '../../public/logo.svg'
+
+import { AiOutlineCalendar, AiOutlineUser} from 'react-icons/ai'
 
 interface Post {
   uid?: string;
@@ -24,9 +27,21 @@ interface HomeProps {
   postsPagination: PostPagination;
 }
 
-// export default function Home() {
-//   // TODO
-// }
+ export default function Home() {
+  return(
+    <main className={styles.main}>
+      <img src={logo} alt="logo" />
+      <article className={styles.post}>
+        <strong> Como utilizar os hooks </strong>
+        <span> Pensando em sincronização em vez de ciclos da vida </span>
+        <div>
+          <time> <AiOutlineCalendar /> 15 mar 2022 </time>
+          <p> <AiOutlineUser />Joseph Oliveira </p>
+        </div>
+      </article>
+    </main>
+  );
+}
 
 // export const getStaticProps = async () => {
 //   // const prismic = getPrismicClient({});

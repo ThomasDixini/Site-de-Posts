@@ -1,1 +1,38 @@
 // TODO
+
+.main {
+    max-width: 700px;
+    margin: 5rem auto;
+    
+    .post {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.65rem;
+        color: var(--gray-200);
+        
+        strong {
+            font-size: 1.5rem;
+            color: #f8f8f8;
+            transition: color 0.25s;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--pink-600);
+            }
+        }
+        span {
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        div {
+            display: flex;
+            gap: 3.25rem;
+
+            time, p {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    }
+}
